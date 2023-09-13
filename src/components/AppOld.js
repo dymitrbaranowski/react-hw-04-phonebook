@@ -30,24 +30,24 @@ export class App extends Component {
     }
   }
 
-  handleChange = e => {
-    const { name, value } = e.target;
-    this.setState({ [name]: value });
-  };
+  // handleChange = e => {
+  //   const { name, value } = e.target;
+  //   this.setState({ [name]: value });
+  // };
 
-  handleSubmit = ({ name, number }) => {
-    const contact = {
-      id: nanoid(),
-      name,
-      number,
-    };
+  // handleSubmit = ({ name, number }) => {
+  //   const contact = {
+  //     id: nanoid(),
+  //     name,
+  //     number,
+  //   };
 
-    this.state.contacts.some(i => i.name === contact.name)
-      ? alert(`${name} is already in contacts`)
-      : this.setState(({ contacts }) => ({
-          contacts: [contact, ...contacts],
-        }));
-  };
+  //   this.state.contacts.some(i => i.name === contact.name)
+  //     ? alert(`${name} is already in contacts`)
+  //     : this.setState(({ contacts }) => ({
+  //         contacts: [contact, ...contacts],
+  //       }));
+  // };
 
   handleDelete = e => {
     this.setState(prevState => ({
