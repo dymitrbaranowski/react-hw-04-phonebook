@@ -49,8 +49,8 @@ export const App = () => {
   };
 
   const handleDelete = e => {
-    setContacts(prevContacts => 
-      prevContacts.filter(contact => contact.id !== e),
+    setContacts(prevContacts =>
+      prevContacts.filter(contact => contact.id !== e)
     );
   };
 
@@ -79,10 +79,7 @@ export const App = () => {
       <ContactForm handleSubmit={handleSubmit} />
       <h2> Contacts</h2>
       <Filter filter={filter} handleChange={handleChange} />
-      <ContactList
-        contacts={visibleContacts}
-        handleDelete={handleDelete}
-      />
+      <ContactList contacts={visibleContacts} handleDelete={handleDelete} />
     </div>
   );
 };
